@@ -1,5 +1,6 @@
 #! /bin/bash
 
-python make_password.py
+passwordString=`python make_password.py | tail -n 1`
 python make_png.py passwords.txt
-python upload_to_imgur.py
+linkString=`python upload_to_imgur.py`
+python pw-maker.py "$passwordString" "$linkString"

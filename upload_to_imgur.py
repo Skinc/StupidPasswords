@@ -5,8 +5,8 @@ from imgurpython import ImgurClient
 with open('apikeys.json') as data_file:
 	credentials = json.load(data_file)
 
-CLIENT_ID = credentials["client-id"]
-CLIENT_SECRET = credentials["client-secret"]
+CLIENT_ID = credentials["imgur"]["client-id"]
+CLIENT_SECRET = credentials["imgur"]["client-secret"]
 
 client = ImgurClient(CLIENT_ID, CLIENT_SECRET)
 
