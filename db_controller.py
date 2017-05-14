@@ -64,10 +64,17 @@ class Db_Controller(object):
 	def get_pw(self, user, service):
 		user_tweets = self.get_user(user)
 		passwords = self.get_service(service, user_tweets)
-		return passwords[0]["text"].split(":")[1]
+		return passwords[0]["text"].split(":")[1].split(" ")[1]
 
 	def save_pw_from_strings(self, pwstring, link):
 		self.insert("Not {0} {1}".format(pwstring, link))
+
+
+if __name__ == '__main__':
+	db = Db_Controller()
+	pw = db.get_pw("Shane", "Google")
+	print(pw)
+
 
 	
 
