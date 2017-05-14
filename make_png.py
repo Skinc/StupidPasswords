@@ -12,7 +12,7 @@ filename = sys.argv[1]
 def main():
     image = text_image(filename)
     image.show()
-    image.save('image.png')
+    image.save('/home/m/Pictures/passwords.png')
 
 
 def text_image(text_path):
