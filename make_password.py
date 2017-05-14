@@ -1,10 +1,8 @@
 import random
 import sys
 
-print("Username: ")
-input_user = input()
-print("Account for: ")
-input_account = input()
+input_user = input("Username: ")
+input_account = input("Account for: ")
 print("Password length: ")
 input_length = input()
 
@@ -19,6 +17,6 @@ filename = "passwords.txt"
 pwstring = input_user + "'s " + input_account + " account password: " + password
 
 with open(filename, "a") as f:
-	f.write(pwstring + "\n")
+	f.write("\n" + pwstring)
 
 print(pwstring)
